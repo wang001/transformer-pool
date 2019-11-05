@@ -46,19 +46,24 @@ I used OpenNMT-py-0.9.1 and changed MultiHeadedAttention.forward() which in file
 ### char level
 Dataset LCSTS(LCSTS: A Large-Scale Chinese Short Text Summarization Dataset)
 
-500K examples：
+500K examples, 40K step：
 
 |Models Name | ROUGE-1 | ROUGE-2 | ROUGE-L |
 |- | :-: | :-: | :-: |
 |OpenNMT-py | 26.9 | 13.9 | 24.3 |
 |our | 29.7 | 18.2 | 27.6|
 
-All examples(about 2.4M)：
+All examples(about 2.4M), 120K step：
 
 |Model Name | ROUGE-1 | ROUGE-2 | ROUGE-L |
 |- | :-: | :-: | :-: |
 |OpenNMT-py | 31.5 | 18.6 | 28.9 |
 |our | 32.1 | 19.7 | 29.5|
+
+
 ```
-python train.py -data	./datadir/char_shard100000	-save_model	./savedir/transformer1103	-log_file	./logdir/transformer_log_1103	-seed	12345	-layers	1	-heads	16	-word_vec_size	512	-rnn_size	512	-optim	adam	-encoder_type	transformer	-decoder_type	transformer	-position_encoding	-learning_rate	0.001	-batch_size	64	-dropout	0.15	-train_steps	120000	-share_embeddings	-world_size	1	-gpu_ranks	0	-valid_batch_size	64	-valid_steps	20000	-save_checkpoint_steps	20000	-max_grad_norm	5
+python train.py -data ./datadir/char_shard100000 -save_model ./savedir/transformer1103 -log_file ./logdir/transformer_log_1103 -seed 12345 -layers 1 -heads 16 -word_vec_size 512 -rnn_size 512 -optim adam -encoder_type transformer -decoder_type transformer -position_encoding -learning_rate 0.001 -batch_size 64 -dropout 0.15 -train_steps 120000 -share_embeddings -world_size 1 -gpu_ranks 0 -valid_batch_size 64 -valid_steps 20000 -save_checkpoint_steps 20000 -max_grad_norm 5
 ```
+
+### word level
+will be soon.
