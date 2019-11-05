@@ -67,4 +67,11 @@ python train.py -data ./datadir/char_shard100000 -save_model ./savedir/transform
 ```
 
 ### word level
-will be soon.
+
+All examples(about 2.4M), 120K step：
+
+|Model Name | ROUGE-1 | ROUGE-2 | ROUGE-L |
+|- | :-: | :-: | :-: |
+|OpenNMT-py | 33.8 | 20.6 | 30.6 |
+|our | 35.4 | 22.6 | 32.5|
+
