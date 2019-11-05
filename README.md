@@ -56,10 +56,10 @@ data from [SDLM-OpenNMT-py](https://github.com/thunlp/SDLM-pytorch/tree/master/H
 |our | 29.7 | 18.2 | 27.6|
 
 train curve:
-![train curve](./pic/lcsts_char/40k_train_pic.png)
+![train curve](https://github.com/wang001/transformer-pool/raw/master/pic/lcsts_char/40k_train_pic.png)
 
 valid curve:
-![valid curve](./pic/lcsts_char/40k_valid_pic.png)
+![valid curve](https://github.com/wang001/transformer-pool/raw/master/pic/lcsts_char/40k_valid_pic.png)
 
 2.4M examples, 120K steps：
 
@@ -69,10 +69,10 @@ valid curve:
 |our | 32.1 | 19.7 | 29.5|
 
 train curve:
-![train curve](./pic/lcsts_char/120k_train_pic.png)
+![train curve](https://github.com/wang001/transformer-pool/raw/master/pic/lcsts_char/120k_train_pic.png)
 
 valid curve:
-![valid curve](./pic/lcsts_char/120k_valid_pic.png)
+![valid curve](https://github.com/wang001/transformer-pool/raw/master/pic/lcsts_char/120k_valid_pic.png)
 
 ```
 python train.py -data ./datadir/char_shard100000 -save_model ./savedir/transformer1103 -log_file ./logdir/transformer_log_1103 -seed 12345 -layers 1 -heads 16 -word_vec_size 512 -rnn_size 512 -optim adam -encoder_type transformer -decoder_type transformer -position_encoding -learning_rate 0.001 -batch_size 64 -dropout 0.15 -train_steps 120000 -share_embeddings -world_size 1 -gpu_ranks 0 -valid_batch_size 64 -valid_steps 20000 -save_checkpoint_steps 20000 -max_grad_norm 5
