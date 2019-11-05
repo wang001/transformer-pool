@@ -54,7 +54,7 @@ Dataset LCSTS(LCSTS: A Large-Scale Chinese Short Text Summarization Dataset)
 |OpenNMT-py | 26.9 | 13.9 | 24.3 |
 |our | 29.7 | 18.2 | 27.6|
 
-All examples(about 2.4M), 120K steps：
+2.4M examples, 120K steps：
 
 |Model Name | ROUGE-1 | ROUGE-2 | ROUGE-L |
 |- | :-: | :-: | :-: |
@@ -68,7 +68,7 @@ python train.py -data ./datadir/char_shard100000 -save_model ./savedir/transform
 
 ### word level
 
-All examples(about 2.4M), 120K steps：
+2.4M examples, 120K steps：
 
 |Model Name | ROUGE-1 | ROUGE-2 | ROUGE-L |
 |- | :-: | :-: | :-: |
