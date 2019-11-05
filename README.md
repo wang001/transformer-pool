@@ -47,11 +47,14 @@ I used OpenNMT-py-0.9.1 and changed MultiHeadedAttention.forward() which in file
 ### char level
 Dataset LCSTS(LCSTS: A Large-Scale Chinese Short Text Summarization Dataset)
 500K examples.
+
 |Models Name | ROUGE-1 | ROUGE-2 | ROUGE-L |
 |- | :-: | :-: | :-: |
 |OpenNMT-py | 26.9 | 13.9 | 24.3 |
 |our | 29.7 | 18.2 | 27.6|
+
 all examples(about 2.4M).
+
 |Model Name | ROUGE-1 | ROUGE-2 | ROUGE-L |
 |- | :-: | :-: | :-: |
 |OpenNMT-py | 31.5 | 18.6 | 28.9 |
