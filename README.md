@@ -1,4 +1,4 @@
-# transformer_pool
+# transformer-pool
 Imporve the Transformer by 1dPool. 用一维池化改进Transformer，附带在LCSTS数据集上的实验效果。
 
 因为语言大多是词组结构，所以自然的想到在Transformer的attention中增加一个池化让相邻的部分具有相同的注意力。
@@ -13,7 +13,7 @@ I used OpenNMT-py-0.9.1 and changed MultiHeadedAttention.forward() which in file
         else:
             scores = query_key
         scores = scores.float()
-        #############################insert our code begin############################### 
+        ########################### insert our code begin ############################### 
         if mask is not None:  # mask第一次，防止影响max池化结果
             mask = mask.unsqueeze(1)  # [B, 1, 1, T_values]
             scores = scores.masked_fill(mask, -1e18)
@@ -30,7 +30,7 @@ I used OpenNMT-py-0.9.1 and changed MultiHeadedAttention.forward() which in file
                                                                              -1)).view(batch_size, (head_count_2-head_count_1),
                                                                                        query_len, -1)
         scores = scores.contiguous()
-        #############################insert our code end################################# 
+        ########################### insert our code end ################################# 
         if mask is not None:  # mask第二次，对pad的池化导致不为-1e18部分进行清空
             scores = scores.masked_fill(mask, -1e18)
 
