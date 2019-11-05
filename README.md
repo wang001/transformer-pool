@@ -1,7 +1,6 @@
 # transformer_pool
 Imporve the Transformer by 1dPool. 用一维池化改进Transformer，附带在LCSTS数据集上的实验效果。
 
-
 因为语言大多是词组结构，所以自然的想到在Transformer的attention中增加一个池化让相邻的部分具有相同的注意力。
 
 ## 位置
@@ -46,14 +45,15 @@ I used OpenNMT-py-0.9.1 and changed MultiHeadedAttention.forward() which in file
 ## 效果
 ### char level
 Dataset LCSTS(LCSTS: A Large-Scale Chinese Short Text Summarization Dataset)
-500K examples.
+
+500K examples：
 
 |Models Name | ROUGE-1 | ROUGE-2 | ROUGE-L |
 |- | :-: | :-: | :-: |
 |OpenNMT-py | 26.9 | 13.9 | 24.3 |
 |our | 29.7 | 18.2 | 27.6|
 
-all examples(about 2.4M).
+All examples(about 2.4M)：
 
 |Model Name | ROUGE-1 | ROUGE-2 | ROUGE-L |
 |- | :-: | :-: | :-: |
