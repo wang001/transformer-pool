@@ -46,7 +46,8 @@ I used OpenNMT-py-0.9.1 and changed MultiHeadedAttention.forward() which in file
 ## Result
 ### char level
 Dataset LCSTS(LCSTS: A Large-Scale Chinese Short Text Summarization Dataset)
-data from [SDLM-OpenNMT-py](https://github.com/thunlp/SDLM-pytorch/tree/master/Headline_Generation/OpenNMT-py "LCSTS dataset"). 
+
+data from [SDLM-pytorch/Headline_Generation](https://github.com/thunlp/SDLM-pytorch/tree/master/Headline_Generation/OpenNMT-py "LCSTS dataset"). 
 
 500K examples, 40K steps：
 
