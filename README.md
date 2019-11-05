@@ -1,7 +1,8 @@
 # transformer-pool
 Imporve the Transformer by 1dPool. 用一维池化改进Transformer，附带在LCSTS数据集上的实验效果。
 
-因为语言大多是词组结构，所以自然的想到在Transformer的attention中增加一个池化让相邻的部分具有相同的注意力。
+因为语言大多是词组结构，所以自然的想到在Transformer的attention中增加一个池化让相邻的字词具有相同的注意力。
+由于MaxPool实现简单，此处使用MaxPool，而且经过简单实验AvgPool效果和MaxPool类似。
 
 ## 位置
 I used OpenNMT-py-0.9.1 and changed MultiHeadedAttention.forward() which in file multi_head_attn.py
